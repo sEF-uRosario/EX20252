@@ -143,7 +143,7 @@ Ejemplo de HTML:
 
     - El perdedor recibe 0.
 
-5.Duración:
+5. Duración:
 
     - El juego se repite en varias rondas.
 
