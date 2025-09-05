@@ -163,9 +163,9 @@ Ejemplo de HTML:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. En la `Page``Choice` nos falta definir de que modelo lógico queremos tomar los datos, definamos el atributo `form_model` para que tome los datos del modelo `player`.
+        b. En la `Page` `Choice` nos falta definir de que modelo lógico queremos tomar los datos, definamos el atributo `form_model` para que tome los datos del modelo `player`.
 
-        c. En la `Page``Choice` nos falta definir una de las variables que queremos que el jugador ingrese, definamos el atributo `form_fields` para que tome la variable `penny_side` también.
+        c. En la `Page` `Choice` nos falta definir una de las variables que queremos que el jugador ingrese, definamos el atributo `form_fields` para que tome la variable `penny_side` también.
 
         d. Queremos que en la pagina de espera `ResultsWaitPage` se le calcule el puntaje al jugador, para esto debemos definir el método `after_all_players_arrive` y dentro de este llamar al método `set_payoffs`.
 
@@ -177,11 +177,11 @@ Ejemplo de HTML:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. En la `Page``Choice` nos falta definir una de las variables que queremos que el jugador ingrese, definamos el atributo `form_fields` para que tome la variable `porcentaje` también.
+        b. En la `Page` `Choice` nos falta definir una de las variables que queremos que el jugador ingrese, definamos el atributo `form_fields` para que tome la variable `porcentaje` también.
 
-        c. Dentro de la función `vars_for_template` de la `Page``ResultsSummary` debemos retornar el puntaje de cada jugador, para esto debemos agregar la variable `player_in_all_rounds` y definir que tome el valor de `player_in_all_rounds,` en el retorno que nos da la función.
+        c. Dentro de la función `vars_for_template` de la `Page` `ResultsSummary` debemos retornar el puntaje de cada jugador, para esto debemos agregar la variable `player_in_all_rounds` y definir que tome el valor de `player_in_all_rounds,` en el retorno que nos da la función.
 
-        d. A la variable `session` del `vars_for_template` de la `Page``ResultsSummary` le falta asignarle un valor, asignemos el valor de `player.session`.
+        d. A la variable `session` del `vars_for_template` de la `Page` `ResultsSummary` le falta asignarle un valor, asignemos el valor de `player.session`.
 
         e. Al parecer de versiones anteriores nos quedó un código de una pagina que ya no usamos, eliminemos la clase `Instrucciones` y su referencia en la lista `page_sequence`.
 
