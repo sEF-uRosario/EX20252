@@ -117,37 +117,37 @@ Ejemplo de HTML:
 
 1. Participantes:
 
-- Se juega entre 2 jugadores.
+    - Se juega entre 2 jugadores.
 
-- Uno tiene el rol de **Matcher** (quiere que las elecciones coincidan).
+    - Uno tiene el rol de **Matcher** (quiere que las elecciones coincidan).
 
-- El otro es el **Mismatcher** (quiere que las elecciones sean distintas).
+    - El otro es el **Mismatcher** (quiere que las elecciones sean distintas).
 
 2. Decisiones:
 
-- Cada jugador elige cara (**Heads**) o cruz (**Tails**) de forma simultánea.
+    - Cada jugador elige cara (**Heads**) o cruz (**Tails**) de forma simultánea.
 
-- Además, cada jugador indica un **porcentaje entre 0** y **100%** que representa cuánto desea recibir de un premio fijo si gana.
+    - Además, cada jugador indica un **porcentaje entre 0** y **100%** que representa cuánto desea recibir de un premio fijo si gana.
 
 3. Quién gana:
 
-- Si ambos sacan lo mismo (Heads–Heads o Tails–Tails) → gana el **Matcher**.
+    - Si ambos sacan lo mismo (Heads–Heads o Tails–Tails) → gana el **Matcher**.
 
-- Si sacan distinto (Heads–Tails o Tails–Heads) → gana el **Mismatcher**.
+    - Si sacan distinto (Heads–Tails o Tails–Heads) → gana el **Mismatcher**.
 
 4. Pago:
 
-- Solo una de las rondas del juego se paga (elegida al azar).
+    - Solo una de las rondas del juego se paga (elegida al azar).
 
-- El ganador de esa ronda recibe el premio **100** × **porcentaje elegido**.
+    - El ganador de esa ronda recibe el premio **100** × **porcentaje elegido**.
 
-- El perdedor recibe 0.
+    - El perdedor recibe 0.
 
 5.Duración:
 
-- El juego se repite en varias rondas.
+    - El juego se repite en varias rondas.
 
-- En algún momento los roles se invierten, de modo que ambos jugadores pasan por ser Matcher y Mismatcher.
+    - En algún momento los roles se invierten, de modo que ambos jugadores pasan por ser Matcher y Mismatcher.
 
 ---
 ## 📚 Actividad practica 
