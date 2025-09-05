@@ -113,6 +113,43 @@ Ejemplo de HTML:
 - [Guía rápida de oTree en español (GitHub)](https://github.com/otree-org/otree)
 
 ---
+## Juego Matching Pennies
+
+1. Participantes:
+
+- Se juega entre 2 jugadores.
+
+- Uno tiene el rol de **Matcher** (quiere que las elecciones coincidan).
+
+- El otro es el **Mismatcher** (quiere que las elecciones sean distintas).
+
+2. Decisiones:
+
+- Cada jugador elige cara (**Heads**) o cruz (**Tails**) de forma simultánea.
+
+- Además, cada jugador indica un **porcentaje entre 0** y **100%** que representa cuánto desea recibir de un premio fijo si gana.
+
+3. Quién gana:
+
+- Si ambos sacan lo mismo (Heads–Heads o Tails–Tails) → gana el **Matcher**.
+
+- Si sacan distinto (Heads–Tails o Tails–Heads) → gana el **Mismatcher**.
+
+4. Pago:
+
+- Solo una de las rondas del juego se paga (elegida al azar).
+
+- El ganador de esa ronda recibe el premio **100** × **porcentaje elegido**.
+
+- El perdedor recibe 0.
+
+5.Duración:
+
+- El juego se repite en varias rondas.
+
+- En algún momento los roles se invierten, de modo que ambos jugadores pasan por ser Matcher y Mismatcher.
+
+---
 ## 📚 Actividad practica 
 
 
@@ -120,13 +157,19 @@ Ejemplo de HTML:
 
 1. [QUIZ Coordination](https://forms.gle/fkPgumXodH44Xj5i9)
 
-2. :
+2. Matching Pennies:
 
     - Versión A:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. 
+        b. En la `Page``Choice` nos falta definir de que modelo lógico queremos tomar los datos, definamos el atributo `form_model` para que tome los datos del modelo `player`.
+
+        c. En la `Page``Choice` nos falta definir una de las variables que queremos que el jugador ingrese, definamos el atributo `form_fields` para que tome la variable `penny_side` también.
+
+        d. Queremos que en la pagina de espera `ResultsWaitPage` se le calcule el puntaje al jugador, para esto debemos definir el método `after_all_players_arrive` y dentro de este llamar al método `set_payoffs`.
+
+        e. Al parecer de versiones anteriores nos quedó un código de una pagina que ya no usamos, eliminemos la clase `Instrucciones` y su referencia en la lista `page_sequence`.
 
     ---
 
@@ -134,7 +177,13 @@ Ejemplo de HTML:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. 
+        b. En la `Page``Choice` nos falta definir una de las variables que queremos que el jugador ingrese, definamos el atributo `form_fields` para que tome la variable `porcentaje` también.
+
+        c. Dentro de la función `vars_for_template` de la `Page``ResultsSummary` debemos retornar el puntaje de cada jugador, para esto debemos agregar la variable `player_in_all_rounds` y definir que tome el valor de `player_in_all_rounds,` en el retorno que nos da la función.
+
+        d. A la variable `session` del `vars_for_template` de la `Page``ResultsSummary` le falta asignarle un valor, asignemos el valor de `player.session`.
+
+        e. Al parecer de versiones anteriores nos quedó un código de una pagina que ya no usamos, eliminemos la clase `Instrucciones` y su referencia en la lista `page_sequence`.
 
 En la siguiente lista se realiza la asignación de la versión a entregar. La asignación se realizó **al azar** y a **cada ID** de le asignó **una versión**: 
 
@@ -144,6 +193,6 @@ Dependiendo de la versión asignada, deberás cumplir con las tareas correspondi
 
 Enlaces de interés:
 
-- [Apoyo Taller 4]()
+- [Apoyo Taller 5]()
 
-- [Rúbrica de calificación]()
+- [Rúbrica de calificación](Rubrica_Taller_Matching_Pennies.pdf)

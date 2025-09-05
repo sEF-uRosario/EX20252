@@ -70,7 +70,7 @@ def set_payoffs(group: Group):
 # PAGES
 class Choice(Page):
     form_model = 'player'
-    form_fields = ['penny_side', 'porcentaje']
+    form_fields = ['penny_side', '']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -88,13 +88,13 @@ class ResultsSummary(Page):
 
     @staticmethod
     def vars_for_template(player: Player):
-        session = player.session
+        session = 
 
         player_in_all_rounds = player.in_all_rounds()
         return dict(
             total_payoff=sum([p.payoff for p in player_in_all_rounds]),
             paying_round=session.vars['paying_round'],
-            player_in_all_rounds=player_in_all_rounds,
+            
         )
         
 

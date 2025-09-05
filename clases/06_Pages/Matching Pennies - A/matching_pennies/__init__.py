@@ -69,8 +69,8 @@ def set_payoffs(group: Group):
 
 # PAGES
 class Choice(Page):
-    form_model = 'player'
-    form_fields = ['penny_side', 'porcentaje']
+    form_model = ''
+    form_fields = ['', 'porcentaje']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -78,7 +78,7 @@ class Choice(Page):
 
 
 class ResultsWaitPage(WaitPage):
-    after_all_players_arrive = set_payoffs
+    
 
 
 class ResultsSummary(Page):
