@@ -193,6 +193,6 @@ Dependiendo de la versión asignada, deberás cumplir con las tareas correspondi
 
 Enlaces de interés:
 
-- [Apoyo Taller 5]()
+- [Apoyo Taller 5](https://youtu.be/7ylDjwb6SRE)
 
 - [Rúbrica de calificación](Rubrica_Taller_Matching_Pennies.pdf)
