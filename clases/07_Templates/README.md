@@ -165,7 +165,7 @@ En esencia, es un juego que muestra el conflicto entre el interés individual y 
 
 ❗**Nota:** `Recordar usar el método de entrega de actividades y parciales indicado en la sección de "Entrega de actividades y parciales" del curso.` *[Click para visitar "Entrega de actividades y parciales" en la introducción del curso.](../../README.md)*
 
-1. [QUIZ Social Preferences](https://forms.gle/j4mcgNEJJ9RpKZAD8)
+1. [QUIZ Neuroeconomics](https://forms.gle/3S5VdPCpXu1GhBRGA)
 
 2. Prisoner's Dilemma:
 
