@@ -207,6 +207,6 @@ Dependiendo de la versión asignada, deberás cumplir con las tareas correspondi
 
 Enlaces de interés:
 
-- [Apoyo Taller 6]()
+- [Apoyo Taller 6](https://youtu.be/km9zHA1pWR8)
 
 - [Rúbrica de calificación](Rubrica_Taller_Prisioner.pdf)
