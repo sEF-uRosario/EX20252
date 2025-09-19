@@ -85,6 +85,23 @@ En resumen, **Multiplayer Games en oTree** son ideales para estudiar **preferenc
 - [Guía rápida de oTree en español (GitHub)](https://github.com/otree-org/otree)
 
 ---
+## Bargaining Game
+
+- Participan 2 jugadores.
+
+- Hay un monto total disponible de 100 unidades monetarias (cu).
+
+- Cada jugador debe pedir una cantidad entre 0 y 100.
+
+- Regla del juego:
+
+    - Si la suma de las demandas ≤ 100 → cada jugador recibe lo que pidió.
+
+    - Si la suma > 100 → ambos reciben 0.
+
+Es un juego de coordinación y estrategia: pedir mucho aumenta tu ganancia siempre y cuando el otro no pida demasiado; pero si ambos piden demasiado, nadie gana nada.
+
+---
 
 ## 📚 Actividad practica
 
@@ -93,21 +110,41 @@ En resumen, **Multiplayer Games en oTree** son ideales para estudiar **preferenc
 
 1. [QUIZ Social Preferences](https://forms.gle/2eHyMfyzN2SAiNeP8)
 
-2. :
+2. Bargaining Game:
 
     - Versión A:
 
-        a. 
+        a. Realizar un Fetch del repositorio de GitHub.
+        
+        b. Agregar el `chat` de el template `Request`.
+
+        c. Definamos el numero de jugadores por grupo a 2.
+
+        d. Cuando acabe el tiempo de la pagina de espera definamos fuera del bucle el pago del grupo.
+
+        e. Mostrar la suma de las demandas del grupo en la pagina `Results`.
+
+        f. Verificar que el juego funcione correctamente.
     ---
 
     - Versión B:
 
-        a. 
+        a. Realizar un Fetch del repositorio de GitHub.
+
+        b. Agregar el `chat` de el template `Request`.
+
+        c. Arreglar la obtención de los **otros** jugadores del grupo en la función `other_player`.
+
+        d. Mostrar la demanda del otro jugador en la pagina `Results`.
+
+        e. Corregir la obtención de los jugadores del grupo en la función `set_payoffs`.
+
+        f. Verificar que el juego funcione correctamente.
 
 
 En la siguiente lista se realiza la asignación de la versión a entregar. La asignación se realizó **al azar** y a **cada ID** de le asignó **una versión**: 
 
-<img src="../../imgs/" style="margin: 20px;">
+<img src="../../imgs/7/Lista_Taller_7.png" style="margin: 20px;">
 
 Dependiendo de la versión asignada, deberás cumplir con las tareas correspondientes a cada una y para una mejor verificación de lo realizado **tomar una ScreenShot al finalizar cada inciso**, **adjuntar las imágenes con el proyecto creado en un zip al correo designado**. Evitar archivos adicionales en el zip, **solo** debe contener la carpeta del proyecto y las imágenes solicitadas. Verificar que el proyecto enviado tenga los **cambios guardados**.
 
