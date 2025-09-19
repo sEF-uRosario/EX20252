@@ -91,7 +91,7 @@ En resumen, **Multiplayer Games en oTree** son ideales para estudiar **preferenc
 
 ❗**Nota:** `Recordar usar el método de entrega de actividades y parciales indicado en la sección de "Entrega de actividades y parciales" del curso.` *[Click para visitar "Entrega de actividades y parciales" en la introducción del curso.](../../README.md)*
 
-1. [QUIZ ]()
+1. [QUIZ Social Preferences](https://forms.gle/2eHyMfyzN2SAiNeP8)
 
 2. :
 
