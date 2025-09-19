@@ -1,7 +1,7 @@
 # Taller 7 - Multiplayer Games
 
 ---
-## Fecha de entrega: 17 Septiembre 2025
+## Fecha de entrega: 24 Septiembre 2025
 ---
 
 ## ¿Qué son los multiplayer games en oTree?
