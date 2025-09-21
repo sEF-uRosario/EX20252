@@ -150,6 +150,6 @@ Dependiendo de la versión asignada, deberás cumplir con las tareas correspondi
 
 Enlaces de interés:
 
-- [Apoyo Taller 7]()
+- [Apoyo Taller 7](https://youtu.be/0QOpbvOfslo)
 
 - [Rúbrica de calificación]()
