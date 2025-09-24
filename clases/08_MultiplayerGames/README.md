@@ -152,4 +152,4 @@ Enlaces de interés:
 
 - [Apoyo Taller 7](https://youtu.be/0QOpbvOfslo)
 
-- [Rúbrica de calificación]()
+- [Rúbrica de calificación](Rubrica_Taller_Bargaining.pdf)

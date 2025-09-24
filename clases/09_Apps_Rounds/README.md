@@ -195,4 +195,4 @@ Enlaces de interés:
 
 - [Apoyo Taller 8]()
 
-- [Rúbrica de calificación]()
+- [Rúbrica de calificación](Rubrica_Taller_otree-realeffort.pdf)
