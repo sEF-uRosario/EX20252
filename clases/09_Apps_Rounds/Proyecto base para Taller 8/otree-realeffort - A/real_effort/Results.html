@@ -1,0 +1,11 @@
+{{ block title }}
+Results
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+    Realizaste <b>{{ player.num_trials }}</b> puzzles, resolviste correctamente <b>{{ player.num_correct }}</b>,
+    y fallaste en <b>{{ player.num_failed }}</b>.
+</p>
+{{ endblock }}

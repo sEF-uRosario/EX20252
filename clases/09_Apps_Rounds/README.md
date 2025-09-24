@@ -152,20 +152,42 @@ Este juego busca simular situaciones de reciprocidad, normas sociales y justicia
 
 1. [QUIZ Social Norms](https://forms.gle/YfVqW3ptrC58FCYFA)
 
-2. :
+2. Real Effort + Intercambio:
 
     - Versión A:
 
-        a. 
+        a. Realizar un Fetch del repositorio de GitHub.
+
+        b. Agregar la app `real_effort` a la secuencia de apps en `settings.py` antes de `intercambio`.
+
+        c. Al finalizar la app `real_effort`, debemos enviar los intentos fallidos a la app `intercambio` para que el empleador pueda verlos. Implementar esta funcionalidad.
+
+        d. En la app `intercambio`, debemos recibir los intentos fallidos del empleado para mostrarlos posteriormente al empleador. Implementar esta funcionalidad.
+
+        e. Debemos sumar la ganancia que traíamos de la app `real_effort` a la ganancia del empleado en la app `intercambio`. Implementar esta funcionalidad.
+
+        f. Verificar que el juego funcione correctamente.
+
+
     ---
 
     - Versión B:
 
-        a. 
+        a. Realizar un Pull del repositorio de GitHub.
+
+        b. Agregar la app `intercambio` a la secuencia de apps en `settings.py` después de `real_effort`.
+
+        c. Al finalizar la app `real_effort`, debemos enviar los intentos correctos a la app `intercambio` para que el empleador pueda verlos. Implementar esta funcionalidad.
+
+        d. En la app `intercambio`, debemos recibir los intentos correctos del empleado para mostrarlos posteriormente al empleador. Implementar esta funcionalidad.
+
+        e. Debemos enviar la ganancia que conseguimos en la app `real_effort` a la app `intercambio` para usarla posteriormente. Implementar esta funcionalidad.
+
+        f. Verificar que el juego funcione correctamente.
 
 En la siguiente lista se realiza la asignación de la versión a entregar. La asignación se realizó **al azar** y a **cada ID** de le asignó **una versión**: 
 
-<img src="../../imgs/" style="margin: 20px;">
+<img src="../../imgs/8/Lista_Taller_8.png" style="margin: 20px;">
 
 Dependiendo de la versión asignada, deberás cumplir con las tareas correspondientes a cada una y para una mejor verificación de lo realizado **tomar una ScreenShot al finalizar cada inciso**, **adjuntar las imágenes con el proyecto creado en un zip al correo designado**. Evitar archivos adicionales en el zip, **solo** debe contener la carpeta del proyecto y las imágenes solicitadas. Verificar que el proyecto enviado tenga los **cambios guardados**.
 

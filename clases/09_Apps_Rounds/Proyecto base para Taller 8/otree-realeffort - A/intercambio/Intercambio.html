@@ -1,0 +1,19 @@
+{{ block title }}
+    Intercambio
+{{ endblock }}
+{{ block content }}
+
+<p>
+    Ahora verá cuántas respuestas correctas tuvo el empleado. Deberás decidir si darle una bonificación en su pago o no. Recuerde que si decide darle la bonificación, su pago se reducirá en la misma cantidad. Su pago inicial es de <b>{{C.SUELDO_EMPLEADOR}} </b> y el del empleado es de <b>{{C.SUELDO_EMPLEADO}}</b>.
+</p>
+<p>
+    La cantidad de aciertos por parte del empleado es: <b>{{ correcta_empleado }}</b>
+</p>
+<p>
+    La cantidad de equivocaciones por parte del empleado es: <b>{{ fallos_empleado }}</b>
+</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}
