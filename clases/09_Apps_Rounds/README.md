@@ -129,6 +129,17 @@ Este juego representa la idea de que el esfuerzo individual tiene consecuencias 
 
 ---
 
+### Recursos útiles
+
+- [Documentación oficial de oTree - Apps & Rounds](https://otree.readthedocs.io/en/latest/rounds.html)
+
+- [Ejemplos oficiales de oTree](https://www.otreehub.com/)
+
+- [Guía rápida de oTree en español (GitHub)](https://github.com/otree-org/otree)
+
+
+---
+
 ## Juego de Intercambio (Empleador–Empleado)
 
 Es un juego de interacción estratégica entre dos participantes con roles distintos:
@@ -173,7 +184,7 @@ Este juego busca simular situaciones de reciprocidad, normas sociales y justicia
 
     - Versión B:
 
-        a. Realizar un Pull del repositorio de GitHub.
+        a. Realizar un Fetch del repositorio de GitHub.
 
         b. Agregar la app `intercambio` a la secuencia de apps en `settings.py` después de `real_effort`.
 
@@ -193,6 +204,6 @@ Dependiendo de la versión asignada, deberás cumplir con las tareas correspondi
 
 Enlaces de interés:
 
-- [Apoyo Taller 8]()
+- [Apoyo Taller 8](https://youtu.be/hm7OZ9G51uM)
 
 - [Rúbrica de calificación](Rubrica_Taller_otree-realeffort.pdf)
