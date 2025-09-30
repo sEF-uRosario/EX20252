@@ -1,0 +1,111 @@
+{{ block title }}
+    Part 2 Instructions
+{{ endblock }}
+
+{{ block content }}
+
+<style>
+
+    .tab {
+        display: none;
+    }
+
+</style>
+
+<nav>
+  <div class="nav nav-pills justify-content-center" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-task-tab" data-bs-toggle="tab" data-bs-target="#nav-task" type="button" role="tab" aria-controls="nav-task" aria-selected="true">Task</button>
+    <button class="nav-link" id="nav-payment-tab" data-bs-toggle="tab" data-bs-target="#nav-payment" type="button" role="tab" aria-controls="nav-payment" aria-selected="false">Payment</button>
+  </div>
+</nav>
+<br>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-task" role="tabpanel" aria-labelledby="nav-task-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Task
+                </h4>
+                <br>
+                <p>
+                    Part 2 of the experiment consists of eight decisions.
+                    For each decision, you must choose which option you prefer: Option A or Option B.
+                </p>
+                <p>
+                    Option A will always be worth 180 points with 100% probability.
+                    Option B will always be a lottery that pays 385 points if you win and 10 points if you lose.
+                    The probability that you win the lottery will vary across the eight decisions.
+                </p>
+                <p>
+                    To make each decision, check the box next to the option you prefer.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-payment" role="tabpanel" aria-labelledby="nav-payment-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Payment
+                </h4>
+                <br>
+                <p>
+                    This is the method that is used to determine how much you earn in Part 2.
+                </p>
+                <p>
+                    At the end of the experiment,
+                    the computer will randomly pick one of the eight decisions from Part 2 to count for payment.
+                    To do that, the computer draws one number between 1 and 8.
+                    So the selected decision only depends on chance:
+                    all decisions have the same probability of being chosen.
+                    If you chose option A in the selected decision, you will earn 180 points.
+                    If you chose option B (the lottery) in the selected decision,
+                    the computer will run the lottery (based on the probability of winning in the selected decision)
+                    to determine how many points you will earn.
+                    To determine the outcome of the lottery, the computer will draw one number between 1 and 100.
+                    For example, suppose in the selected decision you chose option B
+                    and the probability of winning the lottery was 40%.
+                    Then, if the number chosen is 40 or less, you will win the lottery, and you will earn 385 points.
+                    If the number chosen is 41 or higher, you will lose the lottery, and you will earn 10 points.
+                </p>
+                <p>
+                    At the end of the experiment, the selected question, your choice,
+                    the result of the lottery (if applicable), and the amount that will be paid,
+                    will be shown on the screen.
+                    The points will be exchanged to money.
+                    100 points are worth 1 dollar.
+                </p>
+                <br>
+                <p>
+                    Click the button to begin Part 2.
+                </p>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary">Begin Part 2</button>
+    </div>
+</div>
+
+<script>
+
+    let activeTab = 0;
+
+    function showCurrentTabOnly() {
+        let tabIndex = 0;
+        for (let tab of document.getElementsByClassName('tab')) {
+            tab.style.display = tabIndex === activeTab ? 'block' : 'none';
+            tabIndex++;
+        }
+    }
+
+    showCurrentTabOnly();
+    for (let btn of document.getElementsByClassName('btn-tab')) {
+        btn.onclick = function () {
+            activeTab += parseInt(btn.dataset.offset);
+            showCurrentTabOnly();
+        }
+    }
+
+</script>
+
+{{ endblock }}

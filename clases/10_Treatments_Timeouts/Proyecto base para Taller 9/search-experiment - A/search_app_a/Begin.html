@@ -1,0 +1,20 @@
+{{ block title }}
+    Part 1
+{{ endblock }}
+
+{{ block content }}
+
+<div class="card">
+  <div class="card-body">
+    <p>
+        Next, you will complete Part 1. As a reminder, Part 1 consists of five rounds of Task A, then five rounds of Task B, then five rounds of Task C.
+    </p>
+    <p>
+        Click the button to begin the first round of Task A. Each round of Task A consists of <b>{{ participant.decision_turns_a }}</b> decision turns.
+    </p>
+  </div>
+</div>
+<br>
+<button class="btn btn-primary">Begin Task A</button>
+
+{{ endblock }}

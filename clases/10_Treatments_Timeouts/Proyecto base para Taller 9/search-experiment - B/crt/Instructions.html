@@ -1,0 +1,92 @@
+{{ block title }}
+    Part 3 Instructions
+{{ endblock }}
+
+{{ block content }}
+
+<style>
+
+    .tab {
+        display: none;
+    }
+
+</style>
+
+<nav>
+  <div class="nav nav-pills justify-content-center" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-task-tab" data-bs-toggle="tab" data-bs-target="#nav-task" type="button" role="tab" aria-controls="nav-task" aria-selected="true">Task</button>
+    <button class="nav-link" id="nav-payment-tab" data-bs-toggle="tab" data-bs-target="#nav-payment" type="button" role="tab" aria-controls="nav-payment" aria-selected="false">Payment</button>
+  </div>
+</nav>
+<br>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-task" role="tabpanel" aria-labelledby="nav-task-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Task
+                </h4>
+                <br>
+                <p>
+                    Part 3 of the experiment consists of three questions that vary in difficulty.
+                </p>
+                <p>
+                    To answer each question, type your answer into the blank box provided for that question.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-payment" role="tabpanel" aria-labelledby="nav-payment-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Payment
+                </h4>
+                <br>
+                <p>
+                    This is the method that is used to determine how much you earn in Part 3.
+                </p>
+                <p>
+                    You will receive 50 points for each correct answer.
+                    All three questions are eligible for payment,
+                    so if you answer all three questions correctly, you will receive 150 points in Part 3.
+                    There is no feedback after each question about the result.
+                    At the end of the experiment,
+                    the amount of points you earned in Part 3 will be shown on the screen.
+                    The points will be exchanged to money.
+                    100 points are worth 1 dollar.
+                </p>
+                <br>
+                <p>
+                    Click the button to begin Part 3.
+                </p>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary">Begin Part 3</button>
+    </div>
+</div>
+
+<script>
+
+    let activeTab = 0;
+
+    function showCurrentTabOnly() {
+        let tabIndex = 0;
+        for (let tab of document.getElementsByClassName('tab')) {
+            tab.style.display = tabIndex === activeTab ? 'block' : 'none';
+            tabIndex++;
+        }
+    }
+
+    showCurrentTabOnly();
+    for (let btn of document.getElementsByClassName('btn-tab')) {
+        btn.onclick = function () {
+            activeTab += parseInt(btn.dataset.offset);
+            showCurrentTabOnly();
+        }
+    }
+
+</script>
+
+{{ endblock }}

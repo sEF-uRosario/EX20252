@@ -1,0 +1,23 @@
+{{ block title }}
+Part 2
+{{ endblock }}
+{{ block content }}
+
+<div class="card">
+  <div class="card-body">
+    <p>
+        Make a choice for each of the below rows. When you are done, click the button to submit your choices.
+    </p>
+        {{ include C.TABLE_TEMPLATE }}
+  </div>
+</div>
+<br>
+<button class="btn btn-primary">Submit</button>
+
+<script>
+    function sendPref(radio) {
+        liveSend({trial_id: radio.name, chose_lottery: radio.value === '1'});
+    }
+</script>
+
+{{ endblock }}

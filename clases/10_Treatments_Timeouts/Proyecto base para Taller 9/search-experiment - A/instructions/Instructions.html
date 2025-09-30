@@ -1,0 +1,288 @@
+{{ block title }}
+    Part 1 Instructions
+{{ endblock }}
+
+{{ block content }}
+
+<style>
+
+    .tab {
+        display: none;
+    }
+
+    #ttt-board td {
+        width: 4em;
+        height: 4em;
+        text-align: center;
+        font-size: large;
+        border: 1px solid black;
+    }
+
+    #ttt-board {
+        width: auto;
+        text-align: center;
+    }
+
+</style>
+
+<nav>
+  <div class="nav nav-pills justify-content-center" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-tasks-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-tasks" aria-selected="true">Tasks</button>
+    <button class="nav-link" id="nav-rounds-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-rounds" aria-selected="false">Rounds</button>
+    <button class="nav-link" id="nav-payment-tab" data-bs-toggle="tab" data-bs-target="#nav-payment" type="button" role="tab" aria-controls="nav-payment" aria-selected="false">Payment</button>
+    <button class="nav-link" id="nav-practice-tab" data-bs-toggle="tab" data-bs-target="#nav-practice" type="button" role="tab" aria-controls="nav-process" aria-selected="false">Practice</button>
+  </div>
+</nav>
+<br>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-tasks-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Tasks
+                </h4>
+                <br>
+                <p>
+                    Part 1 consists of three tasks: A, B, and C.
+                    You will complete five rounds of each task.
+                    First you will complete five rounds of Task A,
+                    then five rounds of Task B, then five rounds of Task C.
+                    Every round is independent, but the task will be the same in each of the five rounds.
+                </p>
+                <p>
+                    Tasks A, B, and C are alike; each involve making multiple decisions,
+                    and the types of decisions you need to make are similar.
+                    The difference between the tasks is how many decisions you have to make per round:
+                </p>
+                <ul>
+                    <li> Task A consists of <b>{{ participant.decision_turns_a }}</b> decision turns. </li>
+                    <li> Task B consists of <b>{{ participant.decision_turns_b }}</b> decision turns. </li>
+                    <li> Task C consists of <b>{{ participant.decision_turns_c }}</b> decision turns. </li>
+                </ul>
+                <p>
+                    Since you will complete five rounds per task,
+                    in total you will make {{ total_decisions_a }} decisions for Task A,
+                    {{ total_decisions_b }} decisions for Task B, and {{ total_decisions_c }} decisions for Task C.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-rounds-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Rounds
+                </h4>
+                <br>
+                <p>
+                    To make your decisions in Part 1 tasks, you will use a 4x4 grid of squares.
+                    At the start of each new round,
+                    the computer will create a new grid by randomly selecting a point value for each square.
+                    Each square on the grid corresponds to one value from the set of possible values,
+                    which range from 0 to 100 points.
+                    Each value from 0 to 100 points is equally likely to be chosen by the computer,
+                    and the values of the squares are independent of each other.
+                    These point values will stay fixed for the entire round.
+                    Below you can see what this looks like.
+                </p>
+                <table id="ttt-board" style="visibility: visible;">
+                    <tr>
+                        <td id="square0" data-square="0">{{ player.value_0 }}</td>
+                        <td id="square1" data-square="1">{{ player.value_1 }}</td>
+                        <td id="square2" data-square="2">{{ player.value_2 }}</td>
+                        <td id="square3" data-square="3">{{ player.value_3 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="square4" data-square="4">{{ player.value_4 }}</td>
+                        <td id="square5" data-square="5">{{ player.value_5 }}</td>
+                        <td id="square6" data-square="6">{{ player.value_6 }}</td>
+                        <td id="square7" data-square="7">{{ player.value_7 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="square8" data-square="8">{{ player.value_8 }}</td>
+                        <td id="square9" data-square="9">{{ player.value_9 }}</td>
+                        <td id="square10" data-square="10">{{ player.value_10 }}</td>
+                        <td id="square11" data-square="11">{{ player.value_11 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="square12" data-square="12">{{ player.value_12 }}</td>
+                        <td id="square13" data-square="13">{{ player.value_13 }}</td>
+                        <td id="square14" data-square="14">{{ player.value_14 }}</td>
+                        <td id="square15" data-square="15">{{ player.value_15 }}</td>
+                    </tr>
+                </table>
+                <br>
+                <p>
+                    On your first decision turn of each round,
+                    the computer will only display the point value of one square (the top left square).
+                    Below you can see what this looks like.
+                    To learn the point value of any other square,
+                    you must click on it (choose its point value for one of your decision turns).
+                    Once a (previously blank) square has been chosen at least once,
+                    its point value will be displayed on the square for the rest of the round.
+                    This means that what you learn in an earlier decision turn can be useful to you
+                    in later decision turns <i>within the same round</i>.
+                    In contrast, what you learn in a given round will not be useful to you in future rounds,
+                    because the computer randomly generates a new grid at the start of each round.
+                </p>
+                <table id="ttt-board" style="visibility: visible;">
+                    <tr>
+                        <td id="square90" data-square="90">{{ player.value_0 }}</td>
+                        <td id="square91" data-square="91"></td>
+                        <td id="square92" data-square="92"></td>
+                        <td id="square93" data-square="93"></td>
+                    </tr>
+                    <tr>
+                        <td id="square94" data-square="94"></td>
+                        <td id="square95" data-square="95"></td>
+                        <td id="square96" data-square="96"></td>
+                        <td id="square97" data-square="97"></td>
+                    </tr>
+                    <tr>
+                        <td id="square98" data-square="98"></td>
+                        <td id="square99" data-square="99"></td>
+                        <td id="square910" data-square="910"></td>
+                        <td id="square911" data-square="911"></td>
+                    </tr>
+                    <tr>
+                        <td id="square912" data-square="912"></td>
+                        <td id="square913" data-square="913"></td>
+                        <td id="square914" data-square="914"></td>
+                        <td id="square915" data-square="915"></td>
+                    </tr>
+                </table>
+                <br>
+                <p>
+                    Every time you click on a square (choose a point value), you use one decision turn.
+                    Once you click on any square,
+                    the point value of that square will be added to your payoff for that round.
+                    You will not be able to go back and change your decision once you have clicked on a square.
+                    The round ends once you have completed all of your decision turns.
+                    For example, Task B has {{ total_decisions_b }} decision turns.
+                    This means completing a round of Task B consists of making {{ total_decisions_b }} choices
+                    (clicking {{ total_decisions_b }} squares) from the grid,
+                    and the payoff for a round of Task B is the sum of {{ total_decisions_b }} point values, one from each decision turn.
+                    You are allowed to choose any square on the grid each decision turn,
+                    and you can click on the same square more than once.
+                    The only condition is that you can only choose one square per decision turn.
+                </p>
+                <h4>
+                    Summary
+                </h4>
+                <p>
+                    If you click on a square whose point value is displayed on the square,
+                    you will use one decision turn and that certain point value will
+                    be added to your payoff for that round.
+                </p>
+                <p>
+                    If you click on a square whose point value is hidden, you will use one decision turn,
+                    you will learn that square's point value,
+                    and that value will be added to your payoff for that round.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-payment" role="tabpanel" aria-labelledby="nav-payment-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Payment
+                </h4>
+                <br>
+                <p>
+                    This is the method that is used to determine how much you earn in Part 1.
+                </p>
+                <p>
+                    At the end of the experiment,
+                    the computer will randomly choose three rounds from the 15 rounds of Part 1,
+                    one from each task, to count for payment.
+                    To do that, the computer draws three numbers:
+                    (1) a number between 1 and 5, (2) a number between 6 and 10, and (3) a number between 11 and 15.
+                    So the selected rounds only depends on chance:
+                    all rounds have the same probability of being chosen.
+                    Because only three rounds (out of the 15 total) are randomly selected and paid out,
+                    there is no feedback after each round about the result
+                    (which round has been selected by the computer and the earnings in that round).
+                </p>
+                <p>
+                    At the end of the experiment,
+                    the three selected rounds and your payoffs in those rounds will be shown on the screen.
+                    Those points will be exchanged to money and added together
+                    to determine your total earnings in money from Part 1 of the experiment.
+                    100 points are worth 1 dollar.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-practice" role="tabpanel" aria-labelledby="nav-practice-tab">
+        <div class="card">
+            <div class="card-body">
+                <h4>
+                    Practice Rounds
+                </h4>
+                <br>
+                <p>
+                    You can now practice three rounds, one of each task.
+                    First you will complete one practice round of Task A,
+                    then one practice round of Task B, then one practice round of Task C.
+                    Recall that the number of decision turns in each task is as follows:
+                </p>
+                <ul>
+                    <li> Task A consists of <b>{{ participant.decision_turns_a }}</b> decision turns. </li>
+                    <li> Task B consists of <b>{{ participant.decision_turns_b }}</b> decision turns. </li>
+                    <li> Task C consists of <b>{{ participant.decision_turns_c }}</b> decision turns. </li>
+                </ul>
+                <p>
+                    When you click the button to begin the Task A practice round,
+                    you will see the 4x4 grid of squares generated by the computer for that round.
+                    The number of decision turns you have remaining will appear above the grid.
+                    To choose a square/use a decision turn,
+                    use your mouse to move the cursor on the screen inside the square of your choice.
+                    When you know which decision you would like to make,
+                    click on the left button on your mouse to select your choice.
+                    (If you are using a mobile device, simply touch a square to select your choice).
+                    If there are more decision rounds remaining,
+                    you will then be automatically transferred to the next decision round.
+                    If there are no more decision rounds remaining,
+                    the practice round for Task A will end.
+                    Then a button will appear to begin the practice round for Task B.
+                    The practice round for Task C will follow.
+                </p>
+                <p>
+                    Remember that the computer draws a new 4x4 grid of squares for each round.
+                    These are practice rounds, so take your time.
+                    The decisions you make will not be recorded or eligible for payment.
+                </p>
+                <p>
+                    When you are ready, click the button to begin the Task A practice round.
+                </p>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary">Begin Task A Practice Round</button>
+    </div>
+</div>
+
+<script>
+
+    let activeTab = 0;
+
+    function showCurrentTabOnly() {
+        let tabIndex = 0;
+        for (let tab of document.getElementsByClassName('tab')) {
+            tab.style.display = tabIndex === activeTab ? 'block' : 'none';
+            tabIndex++;
+        }
+    }
+
+    showCurrentTabOnly();
+    for (let btn of document.getElementsByClassName('btn-tab')) {
+        btn.onclick = function () {
+            activeTab += parseInt(btn.dataset.offset);
+            showCurrentTabOnly();
+        }
+    }
+
+</script>
+
+{{ endblock }}

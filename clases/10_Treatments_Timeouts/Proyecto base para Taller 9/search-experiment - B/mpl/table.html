@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <colgroup>
+        <col width="45%">
+        <col width="5%">
+        <col width="5%">
+        <col width="45%">
+    </colgroup>
+    <tr>
+        <td align="right"><b>Option A</b></td>
+            <td></td>
+            <td></td>
+        <td align="left"><b>Option B</b></td>
+    </tr>
+    {{ for t in trials }}
+    <tr>
+        <td align="right">
+            <b>{{ t.sure_payoff }}</b> with a probability of <b>100%</b>
+        </td>
+        <td align="middle">
+            <input type="radio" name="{{ t.id }}" value="0" required onclick="sendPref(this)">
+        </td>
+        <td align="middle">
+            <input type="radio" name="{{ t.id }}" value="1" required onclick="sendPref(this)">
+        </td>
+        <td align="left">
+            <b>{{ t.lottery_high }}</b> with a probability of <b>{{ t.probability_percent }}%</b>,<br/>
+            <b>{{ t.lottery_low }}</b> otherwise.
+        </td>
+    </tr>
+    {{ endfor }}
+</table>

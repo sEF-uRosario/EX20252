@@ -1,0 +1,121 @@
+{{ block title }}
+    Part 1 Practice
+{{ endblock }}
+
+{{ block content }}
+
+<style>
+
+    #ttt-board td {
+        width: 4em;
+        height: 4em;
+        text-align: center;
+        font-size: large;
+        border: 1px solid black;
+    }
+
+    #ttt-board {
+        width: auto;
+        text-align: center;
+    }
+
+</style>
+<div class="card">
+  <div class="card-body">
+    <h4>
+        <div id="round">
+
+        </div>
+    </h4>
+    <p></p>
+    <div id="status">
+
+    </div>
+  </div>
+</div>
+<p></p>
+<button class="otree-btn-next btn btn-primary" id="Next" style="visibility: hidden;">Next</button>
+<table id="ttt-board" style="visibility: visible;">
+    <tr>
+        <td id="square0" data-square="0" onclick="sendMove(0,{{ player.value_0_c }})"></td>
+        <td id="square1" data-square="1" onclick="sendMove(1,{{ player.value_1_c }})"></td>
+        <td id="square2" data-square="2" onclick="sendMove(2,{{ player.value_2_c }})"></td>
+        <td id="square3" data-square="3" onclick="sendMove(3,{{ player.value_3_c }})"></td>
+    </tr>
+    <tr>
+        <td id="square4" data-square="4" onclick="sendMove(4,{{ player.value_4_c }})"></td>
+        <td id="square5" data-square="5" onclick="sendMove(5,{{ player.value_5_c }})"></td>
+        <td id="square6" data-square="6" onclick="sendMove(6,{{ player.value_6_c }})"></td>
+        <td id="square7" data-square="7" onclick="sendMove(7,{{ player.value_7_c }})"></td>
+    </tr>
+    <tr>
+        <td id="square8" data-square="8" onclick="sendMove(8,{{ player.value_8_c }})"></td>
+        <td id="square9" data-square="9" onclick="sendMove(9,{{ player.value_9_c }})"></td>
+        <td id="square10" data-square="10" onclick="sendMove(10,{{ player.value_10_c }})"></td>
+        <td id="square11" data-square="11" onclick="sendMove(11,{{ player.value_11_c }})"></td>
+    </tr>
+    <tr>
+        <td id="square12" data-square="12" onclick="sendMove(12,{{ player.value_12_c }})"></td>
+        <td id="square13" data-square="13" onclick="sendMove(13,{{ player.value_13_c }})"></td>
+        <td id="square14" data-square="14" onclick="sendMove(14,{{ player.value_14_c }})"></td>
+        <td id="square15" data-square="15" onclick="sendMove(15,{{ player.value_15_c }})"></td>
+    </tr>
+</table>
+
+<script>
+
+    function writeStatus(msg) {
+        document.getElementById('status').innerText = msg;
+    }
+
+    function writeRound(msg) {
+        document.getElementById('round').innerText = msg;
+    }
+
+    function liveRecv(data) {
+        let boardState = data.board_state;
+        document.getElementById(`square${0}`).innerText = {'X': '{{ player.value_0_c }}', ' ': '{{ player.value_0_c }}'}[boardState[0]];
+        document.getElementById(`square${1}`).innerText = {'X': '{{ player.value_1_c }}', ' ': ' '}[boardState[1]];
+        document.getElementById(`square${2}`).innerText = {'X': '{{ player.value_2_c }}', ' ': ' '}[boardState[2]];
+        document.getElementById(`square${3}`).innerText = {'X': '{{ player.value_3_c }}', ' ': ' '}[boardState[3]];
+        document.getElementById(`square${4}`).innerText = {'X': '{{ player.value_4_c }}', ' ': ' '}[boardState[4]];
+        document.getElementById(`square${5}`).innerText = {'X': '{{ player.value_5_c }}', ' ': ' '}[boardState[5]];
+        document.getElementById(`square${6}`).innerText = {'X': '{{ player.value_6_c }}', ' ': ' '}[boardState[6]];
+        document.getElementById(`square${7}`).innerText = {'X': '{{ player.value_7_c }}', ' ': ' '}[boardState[7]];
+        document.getElementById(`square${8}`).innerText = {'X': '{{ player.value_8_c }}', ' ': ' '}[boardState[8]];
+        document.getElementById(`square${9}`).innerText = {'X': '{{ player.value_9_c }}', ' ': ' '}[boardState[9]];
+        document.getElementById(`square${10}`).innerText = {'X': '{{ player.value_10_c }}', ' ': ' '}[boardState[10]];
+        document.getElementById(`square${11}`).innerText = {'X': '{{ player.value_11_c }}', ' ': ' '}[boardState[11]];
+        document.getElementById(`square${12}`).innerText = {'X': '{{ player.value_12_c }}', ' ': ' '}[boardState[12]];
+        document.getElementById(`square${13}`).innerText = {'X': '{{ player.value_13_c }}', ' ': ' '}[boardState[13]];
+        document.getElementById(`square${14}`).innerText = {'X': '{{ player.value_14_c }}', ' ': ' '}[boardState[14]];
+        document.getElementById(`square${15}`).innerText = {'X': '{{ player.value_15_c }}', ' ': ' '}[boardState[15]];
+
+        let decisions_remaining = data.decisions_remaining;
+        if (data.round_complete) {
+            button = document.getElementById("Next");
+            button.style.visibility = "visible";
+            table = document.getElementById("ttt-board");
+            table.style.visibility = "hidden";
+            writeRound('Task C Practice');
+            writeStatus('You have completed the practice round for Task C. Click Next to continue.');
+        } else {
+            writeRound('Task C Practice Round 1 of 1');
+            if (data.first_turn) {
+                writeStatus('You have {{ player.DECISION_TURNS_C }} of {{ player.DECISION_TURNS_C }} decision turns remaining in this practice round. Make your first decision by choosing any square.');
+            } else {
+                writeStatus('You have ' + decisions_remaining + ' of {{ player.DECISION_TURNS_C }} decision turns remaining in this practice round. Make your next decision by choosing any square.');
+            }
+        }
+    }
+
+    function sendMove(x,y) {
+        liveSend({'move': x, 'value': y});
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        liveSend({});
+    });
+</script>
+
+{{ endblock }}

@@ -1,0 +1,70 @@
+{{ block title }}
+    Payment Summary
+{{ endblock }}
+
+{{ block content }}
+
+<div class="card">
+  <div class="card-body">
+        <h4>
+            Part 1
+        </h4>
+        <p>
+            Round {{ participant.random_round_part1_a }} of Task A was randomly chosen to count for payment.
+            The sum of the point values of the {{ participant.decision_turns_a }} squares you chose in that round is {{ participant.payoff_part1_a }}.
+        </p>
+        <p>
+            Round {{ participant.random_round_part1_b }} of Task B was randomly chosen to count for payment.
+            The sum of the point values of the {{ participant.decision_turns_b }} squares you chose in that round is {{ participant.payoff_part1_b }}.
+        </p>
+        <p>
+            Round {{ participant.random_round_part1_c }} of Task C was randomly chosen to count for payment.
+            The sum of the point values of the {{ participant.decision_turns_c }} squares you chose in that round is {{ participant.payoff_part1_c }}.
+        </p>
+        <p>
+        This means you earned a total of {{ participant.payoff_part1 }} in Part 1.
+        </p>
+        <h4>
+            Part 2
+        </h4>
+        <p>
+            Decision {{ participant.random_round_part2 }} was randomly chosen to count for payment.
+            You chose {{ if participant.chose_lottery }} Option B for that decision,
+            which pays 385 points if you win the lottery and 10 points otherwise.
+            The probability of winning the lottery in that decision was {{ participant.lottery_percent }}%.
+            Based on the random number chosen by the computer,
+            you {{ if participant.won_lottery }} won {{ else }} lost {{ endif }} the lottery. {{ endif }}
+            Option A for that decision.
+        </p>
+        <p>
+            This means you earned {{ participant.payoff_part2 }} in Part 2.
+        </p>
+        <h4>
+            Part 3
+        </h4>
+        <p>
+            You answered {{ participant.questions_correct }} of 3 questions correctly.
+            Each question was worth 50 points.
+        </p>
+        <p>
+            This means you earned {{ participant.payoff_part3 }} in Part 3.
+        </p>
+        <br>
+        <h4>
+            Total Earnings
+        </h4>
+        <p>
+            In total, you earned {{ participant.payoff }} in Parts 1, 2, and 3.
+        </p>
+        <p>
+            At an exchange rate of 100 points = 1 dollar, this makes your total earnings for the experiment
+            <b>{{ participant.payment_incentive }}</b>.
+        </p>
+        <br>
+        Click the button to complete the experiment.
+  </div>
+</div>
+<br>
+<button class="btn btn-primary">Complete Experiment</button>
+
+{{ endblock }}

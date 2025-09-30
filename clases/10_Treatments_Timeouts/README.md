@@ -99,13 +99,19 @@ Explicación:
 
 ❗**Nota:** `Recordar usar el método de entrega de actividades y parciales indicado en la sección de "Entrega de actividades y parciales" del curso.` *[Click para visitar "Entrega de actividades y parciales" en la introducción del curso.](../../README.md)*
 
-1. [QUIZ ]()
+1. [QUIZ Time Preferences and Risk Preferences](https://forms.gle/LgEvGoHs9g8VmU2T6)
 
-2. :
+2. Search Experiment:
 
     - Versión A:
 
         a. Realizar un Fetch del repositorio de GitHub.
+
+        b. En la función `creating_session` de la app `instructions`, falta una línea que asigna el treatment al participante complétala.
+
+        c. En la función `get_decision_turns_a` de la app `instructions`, se quiere que cuando `treatment` tome el valor de 4, la variable devuelva 5, pero actualmente el código no lo asegura. Corrige la condición.
+
+        d. En la app `search_app_b` existe una pagina llamada `Play` la cual debe pasar datos cuando el tiempo acabe, pero en el código actual no lo hace. Corrige el error.
 
 
 
@@ -116,11 +122,19 @@ Explicación:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
+        b. En `creating_session` de la app `instructions`, después de asignar el treatment, también se calculan los valores de `decision_turns_c`. Completa la función.
+
+        c. En la función `get_decision_turns_b` de la app `instructions`, necesitamos definir que variable tomara para la función. Asigna un treatment.
+
+        d. En la app `search_app_a` existe una pagina llamada `Play` la cual debe pasar datos cuando el tiempo acabe, pero en el código actual no lo hace. Corrige el error.
+
+
+❗**Nota:** `Este taller no debe verificarse en el servidor developer de oTree, tiene variables desactivadas que impiden su correcta ejecución. Solo debe realizarse los cambios solicitados y enviarse en un zip.`
 
 
 En la siguiente lista se realiza la asignación de la versión a entregar. La asignación se realizó **al azar** y a **cada ID** de le asignó **una versión**: 
 
-<img src="../../imgs/" style="margin: 20px;">
+<img src="../../imgs/9/Lista_Taller_9.png" style="margin: 20px;">
 
 Dependiendo de la versión asignada, deberás cumplir con las tareas correspondientes a cada una y para una mejor verificación de lo realizado **tomar una ScreenShot al finalizar cada inciso**, **adjuntar las imágenes con el proyecto creado en un zip al correo designado**. Evitar archivos adicionales en el zip, **solo** debe contener la carpeta del proyecto y las imágenes solicitadas. Verificar que el proyecto enviado tenga los **cambios guardados**.
 
