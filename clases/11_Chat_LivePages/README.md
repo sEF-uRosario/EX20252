@@ -126,16 +126,19 @@ Y en el modelo (por ejemplo, en `Group`):
 
 1. [QUIZ ]()
 
-2. :
+2. GPT MASTER:
 
     - Versión A:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. 
+        b. En la app `chat_complex` debemos encontrar el mensaje de activación del bot que se encuentra en el template `chat.html`. Modificaremos el `liveSend` para que envié `event` y `botMsg` en este orden.
 
+        c. En la pagina `chat` de la misma app, debemos agregar el parámetro `player` y `data` al método `live_method` para recibir los datos enviados desde el front-end.
 
+        d. En esta misma pagina y función, debemos grabar el tipo de evento usando `data['event']` en la variable `event`.
 
+        e. En el template `chat.html` de la app `chat_voice` debemos agregar que el método `liveRecv` reciba el parámetro `data` del servidor.
 
     ---
 
@@ -143,7 +146,13 @@ Y en el modelo (por ejemplo, en `Group`):
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. 
+        b. En la app `chat_simple` debemos encontrar el mensaje de activación del bot que se encuentra en el template `chat.html`. Modificaremos el `liveSend` para que envié `event` y `botMsg` en este orden.
+
+        c. En la pagina `chat` de la misma app, debemos agregar el parámetro `player` y `data` al método `live_method` para recibir los datos enviados desde el front-end.
+
+        d. En esta misma pagina y función, debemos corregir la condición que verifica los `event` en los datos recibidos, agregando esta variable.
+
+        e. En el template `chat.html` de la app `chat_multiple_agents` debemos agregar que el método `liveRecv` reciba el parámetro `data` del servidor.
 
 
 ❗**Nota:** `Este taller no debe verificarse en el servidor developer de oTree, tiene variables desactivadas que impiden su correcta ejecución. Solo debe realizarse los cambios solicitados y enviarse en un zip.`
@@ -151,7 +160,7 @@ Y en el modelo (por ejemplo, en `Group`):
 
 En la siguiente lista se realiza la asignación de la versión a entregar. La asignación se realizó **al azar** y a **cada ID** de le asignó **una versión**: 
 
-<img src="../../imgs/" style="margin: 20px;">
+<img src="../../imgs/10/Lista_Taller_10.png" style="margin: 20px;">
 
 Dependiendo de la versión asignada, deberás cumplir con las tareas correspondientes a cada una y para una mejor verificación de lo realizado **tomar una ScreenShot al finalizar cada inciso**, **adjuntar las imágenes con el proyecto creado en un zip al correo designado**. Evitar archivos adicionales en el zip, **solo** debe contener la carpeta del proyecto y las imágenes solicitadas. Verificar que el proyecto enviado tenga los **cambios guardados**.
 
