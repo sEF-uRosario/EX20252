@@ -166,6 +166,6 @@ Dependiendo de la versión asignada, deberás cumplir con las tareas correspondi
 
 Enlaces de interés:
 
-- [Apoyo Taller 9]()
+- [Apoyo Taller 10](https://youtu.be/e3BNtuxCwaQ)
 
 - [Rúbrica de calificación]()
