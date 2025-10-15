@@ -1,6 +1,6 @@
 # Taller 10 - Chat & Live Pages
 ---
-## Fecha de entrega: 15 Octubre 2025
+## Fecha de entrega: 22 Octubre 2025
 ---
 
 ## Chat
