@@ -67,7 +67,7 @@ Esto simula varios jugadores y grupos según lo definido en `Constants`.
 
 1. [QUIZ Markets and Auctions](https://forms.gle/9S1QaHSUsTvyQCqRA)
 
-2. Search Experiment:
+2. Decision Bots:
 
     - Versión A - B:
 
