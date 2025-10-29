@@ -69,25 +69,23 @@ Esto simula varios jugadores y grupos según lo definido en `Constants`.
 
 2. Search Experiment:
 
-    - Versión A:
+    - Versión A - B:
 
         a. Realizar un Fetch del repositorio de GitHub.
 
-        b. 
+        b. En el condicional de la pagina `Decision`, definir el `player.choice` dependiendo de la versión asignada.
+
+        c. En `tests.py` definir el Bot para que escoja la opción correspondiente a la versión asignada.
+
+        d. En el `NAME_IN_URL` del init, definir el nombre correspondiente a la versión asignada (Después del nombre por defecto con un **"_"**).
+
+        e. Corregir el `settings.py` para que el proyecto reconozca la app con el nombre correcto.
+
+        f. Ejecutar el Bot y tomar una ScreenShot del resultado en la terminal. Usar el comando `otree test nombre_app`.
 
 
 
-
-    ---
-
-    - Versión B:
-
-        a. Realizar un Fetch del repositorio de GitHub.
-
-        b. 
-
-
-❗**Nota:** `Este taller no debe verificarse en el servidor developer de oTree, tiene variables desactivadas que impiden su correcta ejecución. Solo debe realizarse los cambios solicitados y enviarse en un zip.`
+❗**Nota:** `Este taller es igual para ambas versiones, con la diferencia de asignación en la letra correspondiente.`
 
 
 En la siguiente lista se realiza la asignación de la versión a entregar. La asignación se realizó **al azar** y a **cada ID** de le asignó **una versión**: 
