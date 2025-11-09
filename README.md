@@ -47,4 +47,4 @@ En este componente podrás encontrar las notas de las actividades y parciales re
 | 12 | 22 Oct 2025 | [**Subastas:** Bots](clases/12_Bots) |
 | 13 | 29 Oct 2025 | [**Torneos:** Admin, Rooms & Currency](clases/13_Admin_Rooms_Currency) |
 | 14 | 05 Nov 2025 | [**Experimentos Laborales:** MTurk & Prolific](clases/14_MTurk_Prolific) |
-| EXF | 12 Nov 2025 | **Examen Final** |
+| EXF | 12 Nov 2025 | **Examen Final:** [Parte practica examen 3](clases/EXF) |
