@@ -62,7 +62,7 @@ Ahora debemos ingresar a nuestro proyecto en Heroku desde nuestro navegador y en
 
 Ahi seleccionaremos el plan gratuito `Redis Cloud - 30 MB Free` y lo añadiremos a nuestra app. (Aunque la base de datos es "gratuita", Heroku puede pedirnos datos de una tarjeta de crédito o débito para verificar la cuenta y cobrar el despliegue de la misma). 
 
-<img src="../../imgs/retro/003.png" style="margin: 20px;">
+<img src="../../imgs/retro/003.png" style="margin: 20px; width: 350px;">
 
 A continuación, se prepara la aplicación para enviarla. Se ejecuta: 
 
