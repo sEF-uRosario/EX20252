@@ -67,6 +67,7 @@ Ahi seleccionaremos el plan gratuito `Redis Cloud - 30 MB Free` y lo añadiremos
 A continuación, se prepara la aplicación para enviarla. Se ejecuta: 
 
 > git add . 
+
 > git commit -m “Comentario sobre la versión que se manda” 
 
 Y finalmente, se envía a Heroku: 
