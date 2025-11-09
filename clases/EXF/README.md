@@ -58,11 +58,11 @@ Luego, se crea un proyecto en Heroku que albergará las configuraciones del serv
 
 Ahora debemos ingresar a nuestro proyecto en Heroku desde nuestro navegador y entraremos en la app que hemos creado para nuestro proyecto oTree. Luego iremos a la pestaña de `Resources` y buscaremos `Redis Cloud` en la sección de `Add-ons`.
 
-<img src="../imgs/retro/002.png" style="margin: 20px;">
+<img src="../../imgs/retro/002.png" style="margin: 20px;">
 
 Ahi seleccionaremos el plan gratuito `Redis Cloud - 30 MB Free` y lo añadiremos a nuestra app. (Aunque la base de datos es "gratuita", Heroku puede pedirnos datos de una tarjeta de crédito o débito para verificar la cuenta y cobrar el despliegue de la misma). 
 
-<img src="../imgs/retro/003.png" style="margin: 20px;">
+<img src="../../imgs/retro/003.png" style="margin: 20px;">
 
 A continuación, se prepara la aplicación para enviarla. Se ejecuta: 
 
