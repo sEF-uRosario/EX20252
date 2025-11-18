@@ -1,5 +1,7 @@
 # Examen Final - Uso de Agentes LLM
 ---
+## Fecha de entrega: 26 de Noviembre 2025
+---
 
 ## 1. Crear cuenta en Heroku
 
@@ -101,3 +103,5 @@ En caso de querer realizar estas configuraciones adicionales, se puede consultar
 - Gráfica de los resultados obtenidos
 - Análisis de Gráfica y Resultados
 - Conclusiones
+
+❗**Nota:** `Recordar usar el método de entrega de actividades y parciales indicado en la sección de "Entrega de actividades y parciales" del curso.` *[Click para visitar "Entrega de actividades y parciales" en la introducción del curso.](../../README.md)*
